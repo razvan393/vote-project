@@ -63,13 +63,13 @@
             </div>
 
             <div class="row text-center">
-                <form method="post">
+                <form id="form" method="get" action="getData.php" >
                     <div class="col-sm-12 text-center">
                         <div class="photo-form-wrapper clearfix" style="margin-bottom: 100px">
                             <div class="row">
                                 <div class="ui-widget col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                                    <input id="localities" name="ORAS" class="form-oras ui-autocomplete-input" type="text" autocomplete="off"
-                                           placeholder="Introdu orasul tau...">
+                                    <input id="localities" name="localitate" onKeyPress="if (event.which == 13) return false;" class="form-oras ui-autocomplete-input" type="text" autocomplete="off"
+                                           placeholder="Introdu localitatea de domiciliu...">
                                 </div>
                             </div>
                         </div>
@@ -188,9 +188,16 @@
                     }
                 });
             },
-            open: function (event, ui) {
+            open: function (ui) {
                 $('.ui-autocomplete').css('z-index', 1000);
             }
+        });
+        $('#form').submit(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
+            $.post($(this).attr('action'), $(this).serialize());
+            return false;
         });
     });
 </script>
