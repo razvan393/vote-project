@@ -20,11 +20,12 @@ $a_json = array();
 $a_json_row = array();
 //get matched data from table
 if ($query = $db->query("SELECT * FROM date WHERE localitate LIKE '%".$searchTerm."%' ORDER BY localitate ASC")){
+    $index = 0;
     while ($row = mysqli_fetch_array($query)) {
         $location = htmlentities(stripcslashes($row['localitate']));
-        /*$judet = htmlentities(stripcslashes($row['judet']));*/
-        $a_json_row['location'] = $location;
-        /*$a_json_row['judet'] = $judet;*/
+        $county = htmlentities(stripcslashes($row['judet']));
+        $a_json_row['label'] = ucwords(strtolower($location)) . ', jud.' . strtoupper($county);
+        $a_json_row['value'] = ucwords(strtolower($location)) . ', jud.' . strtoupper($county);
         array_push($a_json, $a_json_row);
     }
 }

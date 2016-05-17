@@ -15,17 +15,20 @@ if($db->connect_error) {
 }
 
 //get search term
-$searchTerm = trim(strip_tags($_GET['term']));
+$searchTerm = trim(strip_tags($_GET['text']));
 $a_json = array();
 $a_json_row = array();
-if ($query = $db->query("SELECT * FROM date WHERE localitate LIKE '%".$searchTerm."%' ORDER BY localitate ASC")){
+$localitate = explode(',',trim($searchTerm))[0];
+$judet = explode('.',trim($searchTerm))[1];
+
+if ($query = $db->query("SELECT * FROM date WHERE localitate LIKE '%".$localitate."%' AND judet LIKE '%".$judet."%' ORDER BY localitate ASC")){
     while ($row = mysqli_fetch_array($query)) {
         $location = htmlentities(stripcslashes($row['localitate']));
-        $judet = htmlentities(stripcslashes($row['judet']));
-        $valoare = htmlentities(stripcslashes($row['valoare_totala_vot_1persoana']));
-        $a_json_row['location'] = $location;
-        $a_json_row['judet'] = $judet;
-        $a_json_row['valoare'] = $valoare;
+        $county = htmlentities(stripcslashes($row['judet']));
+        $value = htmlentities(stripcslashes($row['valoare_totala_vot_1persoana']));
+        $a_json_row['location'] = ucwords(strtolower($location));
+        $a_json_row['county'] = ucwords(strtolower($county));
+        $a_json_row['value'] = $value;
         array_push($a_json, $a_json_row);
     }
 }
