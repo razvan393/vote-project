@@ -18,10 +18,10 @@ if($db->connect_error) {
 $searchTerm = trim(strip_tags($_GET['text']));
 $a_json = array();
 $a_json_row = array();
-$localitate = explode(',',trim($searchTerm))[0];
-$judet = explode('.',trim($searchTerm))[1];
+$localitate = explode(',',trim($searchTerm));
+$judet = explode('.',trim($searchTerm));
 
-if ($query = $db->query("SELECT * FROM date WHERE localitate LIKE '%".$localitate."%' AND judet LIKE '%".$judet."%' ORDER BY localitate ASC")){
+if ($query = $db->query("SELECT * FROM date WHERE localitate LIKE '%".$localitate[0]."%' AND judet LIKE '%".$judet[1]."%' ORDER BY localitate ASC")){
     while ($row = mysqli_fetch_array($query)) {
         $location = htmlentities(stripcslashes($row['localitate']));
         $county = htmlentities(stripcslashes($row['judet']));
