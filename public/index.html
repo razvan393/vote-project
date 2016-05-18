@@ -177,12 +177,12 @@
         $('#localities').autocomplete({
             source: 'search.php',
             minLength: 3,
-            select: function (request, response) {
+            select: function (event, ui) {
                 $.ajax({
                     type: 'GET',
                     url: 'getData.php',
                     data: {
-                        text: $(this).val()
+                        text: ui.item.value
                     },
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",

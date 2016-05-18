@@ -24,8 +24,16 @@ if ($query = $db->query("SELECT * FROM date WHERE localitate LIKE '%".$searchTer
     while ($row = mysqli_fetch_array($query)) {
         $location = htmlentities(stripcslashes($row['localitate']));
         $county = htmlentities(stripcslashes($row['judet']));
-        $a_json_row['label'] = ucwords(strtolower($location)) . ', jud.' . strtoupper($county);
-        $a_json_row['value'] = ucwords(strtolower($location)) . ', jud.' . strtoupper($county);
+
+
+        if (strtolower($county) == 'bucuresti') {
+            $a_json_row['label'] = ucwords(strtolower($location));
+            $a_json_row['value'] = ucwords(strtolower($location));
+        } else {
+            $a_json_row['label'] = ucwords(strtolower($location)) . ', jud.' . strtoupper($county);
+            $a_json_row['value'] = ucwords(strtolower($location)) . ', jud.' . strtoupper($county);
+        }
+        
         array_push($a_json, $a_json_row);
     }
 }
