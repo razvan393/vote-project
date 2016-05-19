@@ -80,7 +80,7 @@
         </div><!--end of container-->
     </header>
 
-    <section class="pure-text-centered">
+    <section class="pure-text-centered continut" style="display: none">
         <div class="container">
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
@@ -89,21 +89,21 @@
                         tau valoreaza
                     </p>
                     <h1><strong>
-                        <span id="valoare">10000</span> RON
+                        <span id="valoare">1000</span> RON
                     </strong></h1>
                     <h1><strong>
                         <small>Adica fix</small>
-                        195.376.500
+                        <span id="valoare-veche">10.000.000</span>
                         <small>de lei vechi</small>
                     </strong></h1>
                     <p class="lead">
                         Sau, dacă nu ții la bani, poti alege o alta varianta:
                     </p>
                     <ul>
-                        <li><strong>9303</strong> de brichete cu logo de partid</li>
-                        <li><strong>1,097</strong> tone de mici de bâlci cu iz politic</li>
-                        <li><strong>5,582</strong> tone de bere draft data în parc</li>
-                        <li><strong>un</strong> concert particular de muzica populara</li>
+                        <li><strong><span id="brichete">1</span></strong> de brichete cu logo de partid</li>
+                        <li><strong><span id="mititei">1</span></strong> tone de mici de bâlci cu iz politic</li>
+                        <li><strong><span id="bere">1</span></strong> tone de bere draft data în parc</li>
+                        <li><strong><span id="concert">1</span></strong> concerte particulare de muzica populara</li>
                         <li><strong>o eternitate</strong> de vorbe vorbe politice in biserica
                     </ul>
                 </div>
@@ -117,7 +117,7 @@
         </div><!--end of container-->
     </section>
 
-    <section class="side-image text-center">
+    <section class="side-image text-center continut" style="display: none">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 content" style="padding-bottom: 40px; padding-top: 40px;">
@@ -172,7 +172,12 @@
     $(document).ready(function ($) {
         var $localitate = $('#nume-localitate');
         var $judet = $('#nume-judet');
-        var $valoare = $('#valoare');
+        var $valoareNoua = $('#valoare');
+        var $valoareVeche = $('#valoare-veche');
+        var $brichete = $('#brichete');
+        var $mititei = $('#mititei');
+        var $bere = $('#bere');
+        var $concert = $('#concert');
 
         $('#localities').autocomplete({
             source: 'search.php',
@@ -187,9 +192,16 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (data) {
+                        var valoare = data[0]['value'];
                         $localitate.text(data[0]['location']);
                         $judet.text(data[0]['county']);
-                        $valoare.text(data[0]['value']);
+                        $valoareNoua.text(parseInt(valoare).toLocaleString());
+                        $valoareVeche.text(((valoare) * 10000).toLocaleString())
+                        $brichete.text(Math.ceil(parseInt(valoare)/1.2));
+                        $mititei.text(Math.ceil(parseInt(valoare)/9000));
+                        $bere.text(Math.ceil(parseInt(valoare)/2400));
+                        $concert.text(Math.ceil(parseInt(valoare)/15400));
+                        $('.continut').css('display', 'block');
                     },
                     error: function (data) {
 
