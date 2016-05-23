@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Vot 2016</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:url" content="http://www.your-domain.com/your-page.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Your Website Title"/>
+    <meta property="og:description" content="Your description"/>
+    <meta property="og:image" content="http://www.your-domain.com/path/image.jpg"/>
+    <link href="css/flexslider.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/line-icons.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/elegant-icons.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--[if gte IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/ie9.css"/>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="main-container">
+    <header class="no-pad centered-text">
+        <div class="background-image-holder parallax-background overlay">
+            <img class="background-image" alt="Background Image"
+                 src="https://unsplash.imgix.net/uploads/14120938606568dde6e2b/c9e42240?fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050">
+        </div>
+
+        <div class="container align-vertical">
+            <div class="row" style="margin-top: 5%">
+                <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
+                    <h3 class="text-white">Daca cineva vrea sa-ti cumpere votul la alegerile locale…</h3>
+                    <h1 class="text-white">VINDE-L SCUMP !</h1>
+                    <h3 class="text-white">Introdu localitatea in care votezi si vezi valoarea votului tau:</h3>
+                    <br>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <form id="form" method="get" onsubmit="return false;">
+                    <div class="col-sm-12 text-center">
+                        <div class="photo-form-wrapper clearfix" style="margin-bottom: 100px">
+                            <div class="row">
+                                <div class="ui-widget col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                                    <input id="localities" name="localitate" class="form-oras ui-autocomplete-input"
+                                           type="text" autocomplete="off"
+                                           placeholder="Introdu localitatea de domiciliu...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!--end of row-->
+        </div><!--end of container-->
+    </header>
+
+    <section class="pure-text-centered continut" style="display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+                    <p>
+                        Pentru <span id="nume-localitate">Busteni</span>, <span id="nume-judet">Prahova</span>, votul
+                        tau valoreaza
+                    </p>
+                    <h1><strong>
+                        <span id="valoare">1000</span> RON
+                    </strong></h1>
+                    <h1><strong>
+                        <small>Adica fix</small>
+                        <span id="valoare-veche">10.000.000</span>
+                        <small>de lei vechi</small>
+                    </strong></h1>
+                    <p class="lead">
+                        Sau, dacă nu ții la bani, poti alege o alta varianta:
+                    </p>
+                    <ul>
+                        <li><strong><span id="brichete">1</span></strong> de brichete cu logo de partid</li>
+                        <li><strong><span id="mititei">1</span></strong> tone de mici de bâlci cu iz politic</li>
+                        <li><strong><span id="bere">1</span></strong> tone de bere draft data în parc</li>
+                        <li><strong><span id="concert">1</span></strong> concerte particulare de muzica populara</li>
+                        <li><strong>o eternitate</strong> de vorbe vorbe politice in biserica
+                    </ul>
+                </div>
+            </div><!--end of row-->
+            <div style="text-align: center">
+                <div class="fb-share-button"
+                     data-href="http://www.your-domain.com/your-page.html"
+                     data-layout="button_count">
+                </div>
+            </div>
+        </div><!--end of container-->
+    </section>
+
+    <section class="side-image text-center continut" style="display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 content" style="padding-bottom: 40px; padding-top: 40px;">
+                    <p class="lead" style="margin-bottom: 0">
+                        De ce fix atat? Pentru ca astea sunt fix veniturile orasului tau pe 4 ani (2012-2015) impartit
+                        la fix numarul de oameni care au votat acolo in 2012. Altfel spus, fiecare vot le-a dat
+                        primariilor fix suma asta.
+                    </p>
+                    <p class="lead" style="margin-bottom: 0">
+                        Deci, daca nu iti vinzi votul la suma asta, iți iei țeapă!
+                    </p>
+                </div>
+            </div><!--end of row-->
+        </div>
+    </section>
+</div>
+
+<div class="footer-container">
+    <footer class="short bg-secondary-1" style="padding-bottom: 20px; padding-top: 20px; text-align: center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul>
+                        <li><a href="/despre-site.html">Despre site si sume</a></li>
+                        <li><a href="#">Lauda-ne</a></li>
+                        <li><a href="#">Injura-ne</a></li>
+                    </ul>
+                </div>
+            </div><!--end of row-->
+        </div><!--end of container-->
+    </footer>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<!--<script src="js/jquery.min.js"></script>-->
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/jquery.plugin.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/skrollr.min.js"></script>
+<script src="js/spectragram.min.js"></script>
+<script src="js/scrollReveal.min.js"></script>
+<script src="js/isotope.min.js"></script>
+<script src="js/twitterFetcher_v10_min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script>
+    $(document).ready(function ($) {
+        var $localitate = $('#nume-localitate');
+        var $judet = $('#nume-judet');
+        var $valoareNoua = $('#valoare');
+        var $valoareVeche = $('#valoare-veche');
+        var $brichete = $('#brichete');
+        var $mititei = $('#mititei');
+        var $bere = $('#bere');
+        var $concert = $('#concert');
+
+        $('#localities').autocomplete({
+            source: 'search.php',
+            minLength: 3,
+            select: function (event, ui) {
+                $.ajax({
+                    type: 'GET',
+                    url: 'getData.php',
+                    data: {
+                        text: ui.item.value
+                    },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        var valoare = data[0]['value'];
+                        $localitate.text(data[0]['location']);
+                        $judet.text(data[0]['county']);
+                        $valoareNoua.text(parseInt(valoare).toLocaleString());
+                        $valoareVeche.text(((valoare) * 10000).toLocaleString())
+                        $brichete.text(Math.ceil(parseInt(valoare)/1.2));
+                        $mititei.text(Math.ceil(parseInt(valoare)/9000));
+                        $bere.text(Math.ceil(parseInt(valoare)/2400));
+                        $concert.text(Math.ceil(parseInt(valoare)/15400));
+                        $('.continut').css('display', 'block');
+                    },
+                    error: function (data) {
+
+                    }
+                });
+            },
+            open: function (ui) {
+                $('.ui-autocomplete').css('z-index', 1000);
+            }
+        });
+    });
+</script>
+</body>
+</html>
