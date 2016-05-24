@@ -116,15 +116,14 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" style="margin-top: 40px">
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                     <ul class="expanding-ul">
-
-                        <li><strong><span id="brichete">1</span></strong> de brichete cu logo de partid</li>
-                        <li><strong><span id="mititei">1</span></strong> tone de mici de bâlci cu iz politic</li>
-                        <li><strong><span id="bere">1</span></strong> tone de bere draft data în parc</li>
-                        <li><strong><span id="concert">1</span></strong> concerte particulare de muzica populara</li>
-                        <li><strong>o eternitate</strong> de vorbe vorbe politice in biserica
+                        <li><strong><span id="izolari">1</span></strong> izolări termice de apartamente cu 2 camere</li>
+                        <li><strong><span id="pachete">1</span></strong> pachete cu "ajutoare alimentare"</li>
+                        <li><strong><span id="galeti">1</span></strong> găleți de fier care rezistă mai mult de 4 ani</li>
+                        <li><strong><span id="mititei">1</span></strong> kilograme de mici cu iz politic</li>
+                        <li><strong><span id="ulei">1</span></strong> litri de ulei, clasicul ulei...</li>
                     </ul>
                 </div>
             </div>
@@ -334,10 +333,11 @@
         var $judet = $('#nume-judet');
         var $valoareNoua = $('#valoare');
         var $valoareVeche = $('#valoare-veche');
-        var $brichete = $('#brichete');
+        var $izolari = $('#izolari');
+        var $pachete = $('#pachete');
+        var $galeti = $('#galeti');
         var $mititei = $('#mititei');
-        var $bere = $('#bere');
-        var $concert = $('#concert');
+        var $ulei = $('#ulei');
 
         $('#localities').autocomplete({
             source: 'search.php',
@@ -356,11 +356,12 @@
                         $localitate.text(data[0]['location']);
                         $judet.text(data[0]['county']);
                         $valoareNoua.text(parseInt(valoare).toLocaleString());
-                        $valoareVeche.text(((valoare) * 10000).toLocaleString())
-                        $brichete.text(Math.ceil(parseInt(valoare) / 1.2));
-                        $mititei.text(Math.ceil(parseInt(valoare) / 9000));
-                        $bere.text(Math.ceil(parseInt(valoare) / 2400));
-                        $concert.text(Math.ceil(parseInt(valoare) / 15400));
+                        $valoareVeche.text(((valoare) * 10000).toLocaleString());
+                        $izolari.text(Math.ceil(parseInt(valoare) / 4500));
+                        $mititei.text(Math.ceil(parseInt(valoare) / 14));
+                        $galeti.text(Math.ceil(parseInt(valoare) / 25));
+                        $pachete.text(Math.ceil(parseInt(valoare) / 120));
+                        $ulei.text(Math.ceil(parseInt(valoare) / 5));
                         $('.continut').css('display', 'block');
                     },
                     error: function (data) {
@@ -376,4 +377,3 @@
 </script>
 </body>
 </html>
-				
