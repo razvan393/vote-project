@@ -23,11 +23,82 @@
     <!--[if gte IE 9]>
     <link rel="stylesheet" type="text/css" href="css/ie9.css"/>
     <![endif]-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700'
+          rel='stylesheet' type='text/css'>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Cardo:400,400italic" rel="stylesheet" type="text/css">
     <link href="css/font-cardo.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+        .loading-animation {
+            color: #000000;
+            font-size: 30px;
+            text-indent: -9999em;
+            overflow: hidden;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: 72px auto;
+            position: relative;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: load6 1.7s infinite ease;
+            animation: load6 1.7s infinite ease;
+        }
+        @-webkit-keyframes load6 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+        @keyframes load6 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+            }
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+    </style>
 </head>
 
 <body class="no-loader">
@@ -56,7 +127,8 @@
                 <div class="col-md-5 col-sm-6">
                     <h1>Dă-ți seama de valoarea votului tău:</h1>
                     <p class="lead">
-                        Nu mai contează dacă ai cerut schimbarea în stradă. Acum trebuie s-o votezi! Cu grijă, să nu fie lup îmbrăcat în oaie! În plus, votul tău valorează o avere. </p>
+                        Nu mai contează dacă ai cerut schimbarea în stradă. Acum trebuie s-o votezi! Cu grijă, să nu fie
+                        lup îmbrăcat în oaie! În plus, votul tău valorează o avere. </p>
                     <p class="lead"><strong>Vezi aici cam cât:</strong>
                     </p>
                     <form id="form" method="get" onsubmit="return false;">
@@ -69,15 +141,18 @@
                             </div>
                         </div>
                     </form>
-                    <p class="lead"> Voturile tale dau pe mâna aleșilor nu doar banii tăi, ci și ai celor ca care nu votează!
-                        Asta înseamnă că cineva care își vinde votul pe un litru de ulei decide și pentru banii tăi, dacă nu votezi!</p>
+                    <p class="lead"> Voturile tale dau pe mâna aleșilor nu doar banii tăi, ci și ai celor ca care nu
+                        votează!
+                        Asta înseamnă că cineva care își vinde votul pe un litru de ulei decide și pentru banii tăi,
+                        dacă nu votezi!</p>
                 </div>
             </div>
         </div>
         <div class="product-image" style="width: 100%; top: 25%; background-image: url(img/ipad.png); right: -10px;"
              data-scroll-reveal="enter right and move 100px">
-            <div class="col-md-10" style="position: absolute; top: 10%; right: 0%;">
-                <p class="lead" id="tableta"></p>
+            <div class="col-md-10" id="tablet" style="position: absolute; top: 30%; right: -5%; display: none;">
+                <p class="lead" id="tablet-content" style="text-align: center"></p>
+                <div class="loading-animation">Loading...</div>
             </div>
         </div>
     </section>
@@ -90,7 +165,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                     <h1 class="text-white"> Share dacă ai ințeles valoarea votului tău!</h1>
-                    <h2 class="text-white">Arată-le prietenilor valoarea  votului lor în bani. Sigur nu știau.</h2>
+                    <h2 class="text-white">Arată-le prietenilor valoarea votului lor în bani. Sigur nu știau.</h2>
                     <div class="fb-share-button"
                          data-href="http://www.your-domain.com/your-page.html"
                          data-layout="button_count">
@@ -107,91 +182,83 @@
                     <h1>Mergi la vot dacă vrei să schimbi ceva!</h1>
                     <p class="lead">
                         Nu-ți mai găsi scuze să nu mergi!
-                        Aproape jumatate din cei cu drept de vot n-au mers in 2012! Și fix noi, tinerii, chiulim la greu!
+                        Aproape jumatate din cei cu drept de vot n-au mers in 2012! Și fix noi, tinerii, chiulim la
+                        greu!
                         Dacă am merge la vot, am putea schimba rezultatul!
                         O să zici că n-ai cu cine, că toți sunt la fel.
                         <strong>Caută pe net candidații la locale...</strong><br/><br/>
-                        ...dar ai grijă pe ce site-uri sau ce comentarii citești! Postacii și site-urile aservite politic sunt cam peste tot. Nu uita că pentru partidele corupte, e mai ieftin să cumpere voturi dacă tu nu mergi. <br/><br/>
+                        ...dar ai grijă pe ce site-uri sau ce comentarii citești! Postacii și site-urile aservite
+                        politic sunt cam peste tot. Nu uita că pentru partidele corupte, e mai ieftin să cumpere voturi
+                        dacă tu nu mergi. <br/><br/>
                     </p>
-                    <h1>Și cu siguranță cei care își vând votul în [insert city] nu vor primi cat merită fiecare:</h1><br/>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row continut" style="display: none">
+                <h1>Și cu siguranță cei care își vând votul în <span id="nume-localitate">Locality</span> nu vor primi
+                    cat merită fiecare:</h1><br/>
                 <div class="col-sm-12">
                     <div class="timeline-event">
                         <div class="col-sm-6 col-md-push-6">
-                            <h2>40000</h2>
-                            <h5>Tone de mici</h5>
+                            <h2><span id="mititei">1</span></h2>
+                            <h5>Kilograme de mici</h5>
                         </div>
-
                         <div class="middle">
                             <i class="icon icon-telescope"></i>
                             <div class="vertical-line"></div>
                         </div>
-
                         <div class="col-sm-6 col-md-pull-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
                             </p>
                         </div>
-
-
                     </div>
-
                     <div class="timeline-event">
                         <div class="col-sm-6">
-                            <h2>20063</h2>
-                            <h5>Kilograme de ulei</h5>
+                            <h2><span id="ulei">1</span></h2>
+                            <h5>Litri de ulei</h5>
                         </div>
-
                         <div class="middle">
                             <i class="icon icon-streetsign"></i>
                             <div class="vertical-line"></div>
                         </div>
-
                         <div class="col-sm-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
                             </p>
-
                         </div>
                     </div>
-
                     <div class="timeline-event">
                         <div class="col-sm-6 col-md-push-6">
-                            <h2>144000</h2>
-                            <h5>Saci de ciment</h5>
+                            <h2><span id="pachete">1</span></h2>
+                            <h5>Pachete cu "ajutoare alimentare"</h5>
                         </div>
-
                         <div class="middle">
                             <i class="icon icon-heart"></i>
                             <div class="vertical-line"></div>
                         </div>
-
                         <div class="col-sm-6 col-md-pull-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
                             </p>
                         </div>
-
-
                     </div>
-
                     <div class="timeline-event">
                         <div class="col-sm-6">
-                            <h2>2013333</h2>
-                            <h5>Galeti de plastic</h5>
+                            <h2><span id="galeti">1</span></h2>
+                            <h5>Galeti de metal</h5>
                         </div>
-
                         <div class="middle">
                             <i class="icon icon-global"></i>
                             <div class="vertical-line"></div>
                         </div>
-
                         <div class="col-sm-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
                             </p>
                         </div>
                     </div>
@@ -200,69 +267,15 @@
         </div>
     </section>
 
-    <section class="expanding-list continut" style="display: none">
-        <div class="background-image-holder parallax-background">
-            <img src="img/hero22.jpg" class="background-image" alt="Background Image">
+    <section class="action-banner overlay">
+        <div class="background-image-holder">
+            <img class="background-image" alt="Background Image" src="img/hero3.jpg">
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h2>Mergi la vot dacă vrei să schimbi ceva!</h2>
-                    <p class="lead">Pentru ca vor trebui sa cumpere mai putine<br/>
-                        Și cu siguranță cei care își vând votul în <span id="nume-localitate">Locality</span> nu vor
-                        primi cat merită fiecare:</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                    <ul class="expanding-ul">
-                        <li><strong><span id="brichete">1</span></strong> de brichete cu logo de partid</li>
-                        <li><strong><span id="mititei">1</span></strong> tone de mici de bâlci cu iz politic</li>
-                        <li><strong><span id="bere">1</span></strong> tone de bere draft data în parc</li>
-                        <li><strong><span id="concert">1</span></strong> concerte particulare de muzica populara</li>
-                        <li><strong>o eternitate</strong> de vorbe vorbe politice in biserica
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="text-banner">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="icons-large">
-                        <li><i class="icon icon-desktop"></i></li>
-                        <li><i class="icon icon-tools-2"></i></li>
-                        <li><i class="icon icon-compass"></i></li>
-                    </ul>
-                    <h1 class="center-block">"Schimbati voi, generatia tanara"</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <p class="lead"> Nu-ți mai găsi scuze să nu mergi! Aproape jumatate din cei cu drept de vot n-au
-                        mers in 2012!</p>
-                    <p class="lead">Și fix noi, tinerii, chiulim la greu! Dacă am merge la vot, am putea schimba
-                        rezultatul!</p>
-                    <p class="lead">O să zici că n-ai cu cine, că toți sunt la fel. Caută pe net candidații la locale!
-                        S-ar putea sa ai surprize.</p>
-                    <p class="lead">Dar ai grijă pe ce site-uri sau ce comentarii citești! Postacii și site-urile
-                        aservite politic sunt cam peste tot.</p>
-                    <p class="lead">Nu uita că pentru partidele corupte, e mai ieftin să cumpere voturi dacă tu nu
-                        mergi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="strip bg-secondary-1">
-        <div class="container">
-            <div class="row clearfix">
-                <div class="col-sm-6 col-xs-12 pull-left">
-                    <h3 class="text-white"><strong>Fa-ti vocea auzita si votul ascultat</strong></h3>
-                </div>
-                <div class="col-sm-4 col-xs-12 pull-right text-right">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+                    <h1 class="text-white"> Convinge-i și pe alții:</h1>
+                    <h2 class="text-white">Arată-le prietenilor valoarea votului lor în bani. Sigur nu știau.</h2>
                     <div class="fb-share-button"
                          data-href="http://www.your-domain.com/your-page.html"
                          data-layout="button_count">
@@ -272,128 +285,155 @@
         </div>
     </section>
 
-    <section class="text-banner">
-        <div class="container text-center">
-            <h2>Convinge-i și pe alții</h2>
-            <p class="lead">
-                Dar nu uita că rudele mai în vârstă n-au Facebook.<br/>
-                De când nu ți-ai mai sunat bunica, bunicul sau mătușa?<br/>
-                Va trebui s-o faci, dacă vrei să schimbi ceva.
-            </p>
-            <p class="lead">Uite cum ai putea explica:</p>
-            <p>
-                1. Mereu ți-a spus că “tineretul va schimba România”.
-                Spune-i că asta vrei să faci acum! Doar că nu poți faci fără ajutorul ei/lui.
-                Explică-i că dacă se votează mereu aceiași oameni corupți, nu se va schimba nimic.
-            </p>
-            <p>
-                2. Întreabă dacă a primit ceva de pomană de curând. De la un partid.
-                Dacă ești sigur(ă) că e mită electorală spune-i să sune la Poliție!
-                Explică-i de ce a primit pomană și cât valorează votul, de fapt.
-            </p>
-            <p>
-                3. Vezi cum poți să treci în vizită mai des.
-                Dacă partidele corupte le cumpără bunăvoința cu un pachet “de ajutoare”, poate că ar trebui să ajuți mai
-                des. Cu siguranță poți face mai mult bine decât un strain cu o mită electorala.
-            </p>
-            <p class="lead">Ne vedem la vot!</p>
+    <section class="pure-text-centered">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+                    <span class="sub alt-font">Nu uita că rudele mai în vârstă n-au Facebook. </span>
+                    <h1><strong>De când nu ți-ai mai sunat bunica, bunicul sau mătușa?</strong></h1>
+                    <p class="lead">
+                        Va trebui s-o faci, dacă vrei să schimbi ceva. În plus, mai schimbi o vorbă cu un bătrân. Sigur
+                        o să se bucure să te audă.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section class="side-image clearfix">
-        <div class="image-container col-md-5 col-sm-4 pull-left">
-            <div class="background-image-holder">
-                <img src="img/side1.jpg" class="background-image" alt="Background Image">
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-6 col-sm-7 col-sm-offset-5 content clearfix">
-                    <h1>Cum am ajuns la sumele astea? De ce facem asta?</h1>
-                    <p class="lead">
-                        Am facut niste calcule simple la care statisticienii ar stramba din nas. Am adunat veniturile
-                        fiecarei localitati (din ultimii 4 ani) si le-am impartit la numarul de votanti din 2012. Am
-                        facut asta pentru ca:
-                    </p>
+    <section class="hero-slider">
+        <ul class="slides">
+            <li class="overlay">
+                <div class="background-image-holder parallax-background">
+                    <img class="background-image" alt="Background Image" src="img/hero11.jpg">
+                </div>
+
+                <div class="container align-vertical">
                     <div class="row">
-                        <div class="col-md-6 no-pad-left">
-                            <div class="feature feature-icon-left">
-                                <div class="icon-holder">
-                                    <i class="icon icon-genius"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h6>Cineva trebuia sa o faca</h6>
-                                    <p>
-                                        Degeaba facem campanii emotionale si lacrimogene despre iesitul la vot. Ne doare
-                                        de groapa din asfalt, nu de parerea inchipuita a lui Stefan cel Mare.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 no-pad-left">
-                            <div class="feature feature-icon-left">
-                                <div class="icon-holder">
-                                    <i class="icon icon-flag"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h6>Cineva trebuia sa o faca</h6>
-                                    <p>
-                                        Multi politicieni isi mituiesc electoratul cu prea putin fata de cat valoreaza
-                                        votul pe care il cumpara. Am zis sa echilibram balanta.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 no-pad-left">
-                            <div class="feature feature-icon-left">
-                                <div class="icon-holder">
-                                    <i class="icon icon-mobile"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h6>Cineva trebuia sa o faca</h6>
-                                    <p>
-                                        Ne-am saturat de primari care fac 3 parcuri, schimba 2 borduri dupa care isi
-                                        umplu buzunarele din contracte date pe spagi. Si tot sunt votati.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 no-pad-left">
-                            <div class="feature feature-icon-left">
-                                <div class="icon-holder">
-                                    <i class="icon icon-clipboard"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h6>Cineva trebuia sa o faca</h6>
-                                    <p>
-                                        Am gasit niste bani prin casa, n-aveam ce face cu timpul nostru si am zis sa
-                                        facem un site. Ca atata stim.
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="col-md-6 col-sm-9">
+                            <h1 class="text-white">Mereu ți-a spus că “tineretul va schimba România”.</h1>
+                            <p class="lead" style="color:white;">
+                                Spune-i că asta vrei să faci acum! Doar că nu poți faci fără ajutorul ei/lui.
+                                Explică-i că dacă se votează mereu aceiași oameni corupți, nu se va schimba nimic.
+
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </li>
+
+            <li class="overlay">
+                <div class="background-image-holder parallax-background">
+                    <img class="background-image" alt="Background Image" src="img/hero11.jpg">
+                </div>
+
+                <div class="container align-vertical">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-9">
+                            <h1 class="text-white">Întreabă dacă a primit ceva de pomană de curând. De la un
+                                partid. </h1>
+                            <p class="lead" style="color:white;">
+                                Dacă ești sigur(ă) că e mită electorală spune-i să sune la Poliție!
+                                Explică-i de ce a primit pomană și cât valorează votul, de fapt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="overlay">
+                <div class="background-image-holder parallax-background">
+                    <img class="background-image" alt="Background Image" src="img/hero11.jpg">
+                </div>
+
+                <div class="container align-vertical">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-9">
+                            <h1 class="text-white">Vizitează-ți bunica mai des. <br/>Ajut-o cum poți. Se va bucura.</h1>
+                            <p class="lead" style="color:white;">
+                                Dacă partidele corupte le cumpără bunăvoința cu un pachet “de ajutoare”, poate că ar
+                                trebui să ajuți mai des. Cu siguranță poți face mai mult bine decât un strain cu o mită
+                                electorala.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </section>
 </div>
 
 <div class="footer-container">
-    <footer class="short bg-secondary-1" style="padding-bottom: 20px; padding-top: 20px; text-align: center">
+    <footer class="details">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-4">
+                    <h1>Ne vedem la vot!</h1>
+                    <p>
                     <ul>
-                        <li><a href="/despre-site.html">Despre site si sume</a></li>
-                        <li><a href="#">Lauda-ne</a></li>
-                        <li><a href="#">Injura-ne</a></li>
+                        <li>
+                            <a href="/despre-site.html">Cine suntem și de unde avem datele?</a>
+                        </li>
+                        <li>
+                            <a href="#">Laudă-ne</a>
+                        </li>
+                        <li>
+                            <a href="#">Înjură-ne</a>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h1>Contact</h1>
+                    <p>
+                        contact@valoarevot.ro<br>
+                        <br>
+                        București, România<br>
+                        Planeta Pământ<br>
+                        Galaxia Calea Lactee
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h1>Dă mai departe pe</h1>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="icon social_twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon social_facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon social_instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon social_dribbble"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon social_tumblr"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon social_pinterest"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </div><!--end of row-->
-        </div><!--end of container-->
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <span class="sub">© Copright 2014 <a href="#">Medium Rare</a> - All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
     </footer>
 </div>
 
@@ -414,39 +454,28 @@
 <script src="js/scripts.js"></script>
 <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script>
-    function fakeLoad() {
-
-        var animate = $(".animate").addClass("run");
-        var distance = $(".content").offset().top;
-        var timer = setTimeout(function() {
-            $(".loader").fadeOut(250);
-            $('html,body').animate({
-                scrollTop: distance
-            }, 500);
-        }, 3000);
-
-    }
-
     $(document).ready(function ($) {
-        var tableta_array = ['Bugetele sunt făcute din taxe și impozite. Adică banii tăi!',
+        var tablet_array = ['Bugetele sunt făcute din taxe și impozite. Adică banii tăi!',
             'Calculăm valoarea votului folosind date reale din 2012-2015.',
             'Adunăm bugetele locale din 2012, 2013, 2014 și 2015.',
             'Împărțim la numărul  votantilor din 2012 pentru primar și consilieri.',
             'Înmulțim cu 2 pentru ca au fost 2 ștampile: primar și consilieri.',
             'Ținem minte valoarea a 2 ștampile.',
             'Adunăm bugetele județene din 2012, 2013, 2014 și 2015.',
-            'Împărțim la numărul  votantilor din 2012 din [insert judet] pentru președinți și consilieri.',
+            'Împărțim la numărul  votantilor din 2012 pentru președinți și consilieri.',
             'Înmulțim cu 2 pentru ca au fost 2 ștampile: președinte și consilieri.',
             'Adunăm cu valoarea celorlalte 2 ștampile.'
         ];
+        var index = 10;
         var $localitate = $('#nume-localitate');
         var $judet = $('#nume-judet');
         var $valoareNoua = $('#valoare');
         var $valoareVeche = $('#valoare-veche');
-        var $brichete = $('#brichete');
+        var $pachete = $('#pachete');
+        var $galeti = $('#galeti');
         var $mititei = $('#mititei');
-        var $bere = $('#bere');
-        var $concert = $('#concert');
+        var $ulei = $('#ulei');
+        var animate = $(".animate");
 
         $('#localities').autocomplete({
             source: 'search.php',
@@ -465,13 +494,25 @@
                         $localitate.text(data[0]['location']);
                         $judet.text(data[0]['county']);
                         $valoareNoua.text(parseInt(valoare).toLocaleString());
-                        $valoareVeche.text(((valoare) * 10000).toLocaleString())
-                        $brichete.text(Math.ceil(parseInt(valoare) / 1.2));
-                        $mititei.text(Math.ceil(parseInt(valoare) / 9000));
-                        $bere.text(Math.ceil(parseInt(valoare) / 2400));
-                        $concert.text(Math.ceil(parseInt(valoare) / 15400));
-                        $('.continut').css('display', 'block');
-                        console.log(tableta_array);
+                        $valoareVeche.text(((valoare) * 10000).toLocaleString());
+                        $mititei.text(Math.ceil(parseInt(valoare) / 14));
+                        $galeti.text(Math.ceil(parseInt(valoare) / 25));
+                        $pachete.text(Math.ceil(parseInt(valoare) / 120));
+                        $ulei.text(Math.ceil(parseInt(valoare) / 5));
+                        $('.continut, #tablet').css('display', 'block');
+                        $('#tablet-content').text(tablet_array[index]);
+                        index++;
+
+                        setInterval(function () {
+                            if (index < tablet_array.length) {
+                                $('#tablet-content').text(tablet_array[index]);
+                                index++;
+                            } else {
+                                $('.loading-animation').css('display', 'none');
+                                var text = 'Valoarea votului tău este:<br>' + parseInt(valoare).toLocaleString() + ' RON adică fix <br>' + ((valoare) * 10000).toLocaleString() + '  lei vechi';
+                                $('#tablet-content').html(text);
+                            }
+                        }, 4000);
                     },
                     error: function (data) {
 
@@ -486,4 +527,3 @@
 </script>
 </body>
 </html>
-				
