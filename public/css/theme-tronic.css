@@ -260,8 +260,8 @@ span.text-white a {
   }
 }
 section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -901,7 +901,7 @@ header.title:before {
   background-color: #333333;
 }
 .action-banner {
-  padding: 104px 0px;
+  padding: 30px 0px;
   overflow: hidden;
   position: relative;
 }
@@ -2685,8 +2685,8 @@ iframe.mail-list-form {
   display: none !important;
 }
 footer {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 footer.social h1 {
   margin-bottom: 24px;

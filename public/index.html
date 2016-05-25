@@ -9,6 +9,7 @@
 <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+    <meta property="og:image" content="img/valoarea-votului-tau.png" />
     <title>Valoarea Unui Vot La Alegerile Locale</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,94 +21,21 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/theme-tronic.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <!--[if gte IE 9]>
     <link rel="stylesheet" type="text/css" href="css/ie9.css"/>
     <![endif]-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700'
-          rel='stylesheet' type='text/css'>
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Cardo:400,400italic" rel="stylesheet" type="text/css">
-    <link href="css/font-cardo.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <style>
-        .loading-animation {
-            color: #000000;
-            font-size: 30px;
-            text-indent: -9999em;
-            overflow: hidden;
-            width: 1em;
-            height: 1em;
-            border-radius: 50%;
-            margin: 72px auto;
-            position: relative;
-            -webkit-transform: translateZ(0);
-            -ms-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-animation: load6 1.7s infinite ease;
-            animation: load6 1.7s infinite ease;
-        }
-        @-webkit-keyframes load6 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-            }
-            5%,
-            95% {
-                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-            }
-            10%,
-            59% {
-                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
-            }
-            20% {
-                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
-            }
-            38% {
-                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
-            }
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-            }
-        }
-        @keyframes load6 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-            }
-            5%,
-            95% {
-                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-            }
-            10%,
-            59% {
-                box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
-            }
-            20% {
-                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
-            }
-            38% {
-                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
-            }
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-            }
-        }
-    </style>
 </head>
 
 <body class="no-loader">
-<script>(function (d, s, id) {
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v2.6";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
@@ -125,7 +53,7 @@
                         dupa #Colectiv, în 3 pași</h1>
                 </div>
                 <div class="col-md-5 col-sm-6">
-                    <h1>Dă-ți seama de valoarea votului tău:</h1>
+                    <h1 style="font-size: 28px;">Dă-ți seama de valoarea votului tău:</h1>
                     <p class="lead">
                         Nu mai contează dacă ai cerut schimbarea în stradă. Acum trebuie s-o votezi! Cu grijă, să nu fie
                         lup îmbrăcat în oaie! În plus, votul tău valorează o avere. </p>
@@ -165,11 +93,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                     <h1 class="text-white"> Share dacă ai ințeles valoarea votului tău!</h1>
-                    <h2 class="text-white">Arată-le prietenilor valoarea votului lor în bani. Sigur nu știau.</h2>
-                    <div class="fb-share-button"
-                         data-href="http://www.your-domain.com/your-page.html"
-                         data-layout="button_count">
-                    </div>
+                    <div class="fb-share-button" data-href="http://valoarevot.ro/" data-layout="button_count" data-mobile-iframe="true"></div>
                 </div>
             </div>
         </div>
@@ -209,8 +133,7 @@
                         </div>
                         <div class="col-sm-6 col-md-pull-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Împărțiți la festivalurile electorale organizate de candidați din pură mărinimie, nu interes politic.
                             </p>
                         </div>
                     </div>
@@ -225,8 +148,7 @@
                         </div>
                         <div class="col-sm-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Date bătrânilor care trăiesc de pe-o zi pe alta și cred că era mai bine pe vremea lui Ceaușescu
                             </p>
                         </div>
                     </div>
@@ -241,8 +163,7 @@
                         </div>
                         <div class="col-sm-6 col-md-pull-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Distribuite oamenilor care, dintr-un motiv sau altul, sunt dispuși să-și vândă un drept pe o bucată de pâine.
                             </p>
                         </div>
                     </div>
@@ -257,8 +178,7 @@
                         </div>
                         <div class="col-sm-6">
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                                Care să se asorteze cu umbrelele, șepcile și tricourile celor care apoi se vaită că nu au bani de reparat gropi.
                             </p>
                         </div>
                     </div>
@@ -275,11 +195,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
                     <h1 class="text-white"> Convinge-i și pe alții:</h1>
-                    <h2 class="text-white">Arată-le prietenilor valoarea votului lor în bani. Sigur nu știau.</h2>
-                    <div class="fb-share-button"
-                         data-href="http://www.your-domain.com/your-page.html"
-                         data-layout="button_count">
-                    </div>
+                    <div class="fb-share-button" data-href="http://valoarevot.ro/" data-layout="button_count" data-mobile-iframe="true"></div>
                 </div>
             </div>
         </div>
@@ -360,28 +276,46 @@
             </li>
         </ul>
     </section>
+    <section class="text-image-bottom bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+                    <h1>Despre site <br/>Motto: „Romanul, ce nu plateste nu pretuieste”</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="lead">
+                        Toata lumea iti spune ca votul e important, ca e valoros, si o groaza de alte prostii. <br/>Dar
+                        cat de valoros e pana la urma? <br/>Asta face site-ul asta: iti arata care e valoarea reala a
+                        votului tau, folosind sume reale. Este un proiect prin care incercam sa aratam odata pentru
+                        totdeauna ca votul are valoare reala care se poate demonstra usor.<br/> Unde mai pui ca valoarea
+                        chiar e mare? <br/> Deci, daca nu iti vinzi votul la suma asta, iți iei țeapă!
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <h2>De ce facem asta?</h2>
+                    <p class="lead">
+                        Vrem sa destabilizam piata voturilor cumparate de partite cu un pix sau un kil de faina. Speram
+                        ca cei care si-ar vinde votul, sa ceara mai mult. Mult mai mult. Atat de mult incat sa nu si-l
+                        mai vanda. Cei care nu si-ar vinde votul in veci nu vor fi afectati cu nimic si nici nu ii
+                        incurajam sa incerce. Doar sa se informeze mai bine despre oamenii pe care se gandesc sa ii
+                        voteze, din mai multe surse de incredere. Am folosit date reale pe care le poti vedea si
+                        verifica si tu, <a href="#">aici</a>, <a href="#">aici</a> si <a href="#">aici</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            &nbsp;
+        </div>
+    </section>
 </div>
 
 <div class="footer-container">
     <footer class="details">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <h1>Ne vedem la vot!</h1>
-                    <p>
-                    <ul>
-                        <li>
-                            <a href="/despre-site.html">Cine suntem și de unde avem datele?</a>
-                        </li>
-                        <li>
-                            <a href="#">Laudă-ne</a>
-                        </li>
-                        <li>
-                            <a href="#">Înjură-ne</a>
-                        </li>
-                    </ul>
-                    </p>
-                </div>
                 <div class="col-sm-4">
                     <h1>Contact</h1>
                     <p>
@@ -393,6 +327,22 @@
                     </p>
                 </div>
                 <div class="col-sm-4">
+                    <h1>Ne vedem la vot!</h1>
+                    <!--<p>
+                    <ul>
+                        <li>
+                            <a href="/despre-site.html">Cine suntem și de unde avem datele?</a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@valoarevot.ro">Laudă-ne</a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@valoarevot.ro">Înjură-ne</a>
+                        </li>
+                    </ul>
+                    </p>-->
+                </div>
+                <!--<div class="col-sm-4">
                     <h1>Dă mai departe pe</h1>
                     <ul class="social-icons">
                         <li>
@@ -426,7 +376,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -466,7 +416,7 @@
             'Înmulțim cu 2 pentru ca au fost 2 ștampile: președinte și consilieri.',
             'Adunăm cu valoarea celorlalte 2 ștampile.'
         ];
-        var index = 0;
+
         var $localitate = $('#nume-localitate');
         var $judet = $('#nume-judet');
         var $valoareNoua = $('#valoare');
@@ -476,11 +426,13 @@
         var $mititei = $('#mititei');
         var $ulei = $('#ulei');
         var animate = $(".animate");
+        var setIntv = 0;
 
         $('#localities').autocomplete({
             source: 'search.php',
             minLength: 3,
             select: function (event, ui) {
+                window.clearInterval(setIntv);
                 $.ajax({
                     type: 'GET',
                     url: 'getData.php',
@@ -490,6 +442,7 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (data) {
+                        var index = 0;
                         var valoare = data[0]['value'];
                         $localitate.text(data[0]['location']);
                         $judet.text(data[0]['county']);
@@ -499,11 +452,11 @@
                         $galeti.text(Math.ceil(parseInt(valoare) / 25));
                         $pachete.text(Math.ceil(parseInt(valoare) / 120));
                         $ulei.text(Math.ceil(parseInt(valoare) / 5));
-                        $('.continut, #tablet').css('display', 'block');
+                        $('.continut, .loading-animation, #tablet').css('display', 'block');
                         $('#tablet-content').text(tablet_array[index]);
                         index++;
 
-                        setInterval(function () {
+                        setIntv = setInterval(function () {
                             if (index < tablet_array.length) {
                                 $('#tablet-content').text(tablet_array[index]);
                                 index++;
@@ -511,6 +464,7 @@
                                 $('.loading-animation').css('display', 'none');
                                 var text = 'Valoarea votului tău este:<br>' + parseInt(valoare).toLocaleString() + ' RON adică fix <br>' + ((valoare) * 10000).toLocaleString() + '  lei vechi';
                                 $('#tablet-content').html(text);
+                                window.clearInterval(setIntv);
                             }
                         }, 3000);
                     },
