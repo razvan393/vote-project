@@ -807,7 +807,7 @@ header .btn:last-child {
   position: relative;
 }
 .hero-slider .slides li {
-  height: 650px;
+  height: 450px;
   overflow: hidden;
   position: relative;
 }

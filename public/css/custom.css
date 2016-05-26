@@ -68,3 +68,24 @@
         box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
     }
 }
+
+@media screen and (min-width: 769px) {
+    #tablet-value {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-image,
+    .middle {
+        display: none;
+    }
+
+    #tablet-value {
+        display: block;
+    }
+
+    .col-sm-6 {
+        width: 100%!important;
+    }
+}
